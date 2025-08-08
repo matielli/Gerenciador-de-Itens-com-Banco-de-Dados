@@ -1,0 +1,45 @@
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Gerenciador de Itens</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Gerenciador de Itens</h1>
+
+    <section class="form">
+      <h2>Adicionar / Editar Item</h2>
+      <form id="item-form">
+        <input type="hidden" id="item-id">
+        <label>Nome<br><input type="text" id="nome" required></label>
+        <label>Tipo<br><input type="text" id="tipo" required></label>
+        <label>Quantidade<br><input type="number" id="quantidade" min="0" value="0"></label>
+        <div class="actions">
+          <button type="submit">Salvar</button>
+          <button type="button" id="cancel">Cancelar</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="list">
+      <h2>Itens</h2>
+      <div class="filters">
+        <input type="text" id="filter-q" placeholder="Pesquisar por nome">
+        <input type="text" id="filter-tipo" placeholder="Filtrar por tipo">
+        <button id="btn-filter">Filtrar</button>
+        <button id="btn-clear">Limpar</button>
+      </div>
+      <table id="itens-table">
+        <thead>
+          <tr><th>ID</th><th>Nome</th><th>Tipo</th><th>Quantidade</th><th>Ações</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
